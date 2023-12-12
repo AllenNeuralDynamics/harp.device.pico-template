@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 #add_definitions(-DDEBUG) # Uncomment for debugging
 
 # PICO_SDK_PATH must be defined.
-include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
+include(${PICO_SDK_PATH}/pico_sdk_init.cmake/firmware)
 
 # Use modern conventions like std::invoke
 set(CMAKE_CXX_STANDARD 17)

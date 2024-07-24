@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.13)
+find_package(Git REQUIRED)
+execute_process(COMMAND "${GIT_EXECUTABLE}" rev-parse --short HEAD OUTPUT_VARIABLE COMMIT_ID OUTPUT_STRIP_TRAILING_WHITESPACE)
+message(STATUS "Computed Git Hash: ${COMMIT_ID}")
+add_definitions(-DGIT_HASH="${COMMIT_ID}") # Usable in source code.
 
 #add_definitions(-DDEBUG) # Uncomment for debugging
 
@@ -8,7 +12,7 @@ include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 # Use modern conventions like std::invoke
 set(CMAKE_CXX_STANDARD 17)
 
-project(harp_c_app_example)
+project(harp_c_app_example-${COMMIT_ID})
 
 pico_sdk_init()
 add_subdirectory(lib/harp.core.rp2040/firmware) # Path to harp.core.rp2040.

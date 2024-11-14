@@ -29,7 +29,7 @@ An RP2040-based Harp hardware/firmware project template.
 * Remove all unused hardware folder starter projects.
 * 🔧 Design your hardware.
 * In the PCBA silkscreen, add:
-  * SIPE part number with full project semantic version appended in the format: `{SIPE Project Number}-E-{major}-{minor}-{patch}`.
+  * SIPE part number with full hardware semantic version appended in the format: `{SIPE Project Number}-E-{hw major}-{hw minor}-{hw patch}`. Version number fields range from 1-999 and include leading zeros.
   * [QR code](https://www.the-qrcode-generator.com/) linking to the Github repository.
 
 ## Firmware
@@ -37,10 +37,10 @@ An RP2040-based Harp hardware/firmware project template.
 * 📝 Write your firmware.
 
 # Github Release Conventions
-Releases specify any vetted changes to the hardware, firmware, software interface, or Harp protocol.
+Releases specify any vetted changes to the hardware or firmware.
 
 Each release specifies:
-* semantic version of the entire project
+* semantic versions of changed elements: hardware or firmware.
 * SIPE part number (or part numbers if multiple are compatible)
 
 Each hardware release includes:
@@ -53,11 +53,11 @@ Each hardware release specifies:
 * compatible SIPE part number(s)
 
 > [!NOTE]
-> SIPE part numbers only encode semantic version major number, so multiple minor/patch hardware releases may point to the same SIPE part number. 
+> SIPE part numbers only encode hardware semantic version major number, so multiple minor/patch hardware releases may point to the same SIPE part number.
 
 Each firmware release specifies:
-* compatible hardware:
-  * SIPE part number(s)
+* firmware semantic version
+* compatible hardware (SIPE part number or part number range).
 
 Each firmware release includes:
 * compiled binary file (**\*.uf2**) of the firmware.
@@ -65,17 +65,9 @@ Each firmware release includes:
 ## Release Title
 The release title is specified as follows:
 
-`pcb{major}.{minor}-fw{major}.{minor}-harp{protocol-major}.{protocol-minor}`
+`hw{hw major}.{hw minor}.{hw patch}-fw{fw major}.{fw minor}.{fw patch}`
 
 > [!NOTE]
-> The `major` and `minor` fields are the *semantic version* project fields. These will likely always be the same following adoption of the [SIPE PCBA part numbering standard](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/EYsRN8q4jHJDmG5DNf-gaM0Bq418YMXollFxtB9d_NZ6pg?e=joLAvU) (~Nov 2024).
+> After Oct 2024, hardware major fields on all future releases will be equivalent to the major version number of the SIPE part number. See the [SIPE PCBA part numbering standard](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/EYsRN8q4jHJDmG5DNf-gaM0Bq418YMXollFxtB9d_NZ6pg?e=joLAvU) for more details.
 
-The above field specification enables automation utilities to find the latest firmware version and automatically update compatible hardware.
-
-Since releases can include changes to some, but not other fields, unchanged fields are omitted.
-| Change                | Release Title                                             | Note                                                                                                                       |
-|-----------------------|-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| hardware-only         | `pcb{major}.{minor}`                                      |                                                                                                                            |
-| firmware-only         | `fw{major}.{minor}`                                       |                                                                                                                            |
-| hardware and firmware | `pcb{major}.{minor}-fw{major}.{minor}`                    |                                                                                                                            |
-| Harp protocol only    | `fw{major}.{minor}-harp{protocol-major}.{protocol-minor}` | This is inherently a firmware change also. Must bump project patch number, but may  or may not bump major or minor numbers |
+The above field spec enables automation utilities to find the latest firmware version and automatically update compatible hardware. Since releases can include changes to some, but not other fields, unchanged fields are omitted. (i.e: firmware-only changes would be titled `fw{fw major}.{fw minor}.{fw patch}`.)

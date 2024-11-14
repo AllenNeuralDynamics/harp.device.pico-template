@@ -53,7 +53,7 @@ Each hardware release specifies:
 * compatible SIPE part number(s)
 
 > [!NOTE]
-> SIPE part numbers only encode semantic version major changes, so multiple minor/patch hardware releases may point to the same SIPE part number. 
+> SIPE part numbers only encode semantic version major number, so multiple minor/patch hardware releases may point to the same SIPE part number. 
 
 Each firmware release specifies:
 * compatible hardware:

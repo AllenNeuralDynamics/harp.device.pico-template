@@ -1,13 +1,21 @@
-An RP2040-based Harp Hardware/Firmware project template.
+# harp.device.pico-template
+
+An RP2040-based Harp hardware/firmware project template.
 
 ## Features
-* Schematic template for an isolated full speed USB Harp Device with an audio jack
+### Hardware
+* Schematic template for an isolated Full Speed USB Harp Device with an audio jack
 * basic PCB Layout with size hints for various existing enclosures
   * DC Barrel Jack (2.1 x 5.5mm, positive center)
   * USBC
   * 3.5mm audio jack for Harp synchronization signal
   * Ground lug
-* firmware template using the [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule
+### Firmware
+* basic "hello-world" project with corresponding file structure
+* populated CMakeLists.txt for compliation
+* placeholder USB descriptors for manufacturer and description fields (in the CMakeLists.txt)
+* compilation [instructions](./firmware/README.md)
+* harp protocol core library included as a submodule [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040)
 
 ## Wiring Diagram
 

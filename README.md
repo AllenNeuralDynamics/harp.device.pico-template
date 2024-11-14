@@ -3,6 +3,7 @@
 An RP2040-based Harp hardware/firmware project template.
 
 ## Features
+* predefined *.gitignore* file to remove extraneous KiCAD (hardware) files.
 ### Hardware
 * Schematic template for an isolated Full Speed USB Harp Device with an audio jack
 * basic PCB Layout with size hints for various existing enclosures
@@ -13,13 +14,17 @@ An RP2040-based Harp hardware/firmware project template.
 ### Firmware
 * basic "hello-world" project with corresponding file structure
 * populated CMakeLists.txt for compliation
-* placeholder USB descriptors for manufacturer and description fields (in the CMakeLists.txt)
+* placeholder USB descriptors for Manufacturer and Description fields (in the CMakeLists.txt)
 * compilation [instructions](./firmware/README.md)
 * harp protocol core library included as a submodule [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040)
 
-## Wiring Diagram
-
-*TODO: Wiring Diagram Here*
+# Using this template
+## Hardware
+* Remove all unused hardware folder starter projects.
+* 🔧 Design your hardware.
+## Firmware
+* Update the *Manufacturer* and *Description* USB descriptors in the CMakeLists.txt
+* 📝 Write your firmware.
 
 # Github Release Conventions
 Releases specify any vetted changes to the hardware, firmware, software interface, or Harp protocol.

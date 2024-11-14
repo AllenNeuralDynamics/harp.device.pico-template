@@ -13,7 +13,7 @@ An RP2040-based Harp Hardware/Firmware project template.
 
 *TODO: Wiring Diagram Here*
 
-# Release Conventions
+# Github Release Conventions
 Releases specify any vetted changes to the hardware, firmware, software interface, or Harp protocol.
 
 Each release specifies:

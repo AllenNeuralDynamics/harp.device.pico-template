@@ -18,14 +18,26 @@ Releases specify any vetted changes to the hardware, firmware, software interfac
 
 Each release specifies:
 * semantic version of the entire project
+* SIPE part number (or part numbers if multiple are compatible)
 
 Each hardware release includes:
+* STEP file of the PCB named with the SIPE part number
+* Gerber files (with logos removed) of the PCBA
+* Position files for component placement
+* Bill-of-Materials for the PCBA
 
 Each hardware release specifies:
+* compatible SIPE part number(s)
+
+> [!NOTE]
+> SIPE part numbers only encode semantic version major changes, so multiple minor/patch hardware releases may point to the same SIPE part number. 
 
 Each firmware release specifies:
+* compatible hardware:
+  * SIPE part number(s)
 
 Each firmware release includes:
+* compiled binary file (**\*.uf2**) of the firmware.
 
 ## Release Title
 The release title is specified as follows:

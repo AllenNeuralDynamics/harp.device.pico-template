@@ -33,7 +33,7 @@ The release title is specified as follows:
 `pcb{major}.{minor}-fw{major}.{minor}-harp{protocol-major}.{protocol-minor}`
 
 > [!NOTE]
-> The `major` and `minor` fields are the *semantic version* project fields. These will likely always be the same following the SIPE PCBA part numbering standard.
+> The `major` and `minor` fields are the *semantic version* project fields. These will likely always be the same following adoption of the [SIPE PCBA part numbering standard](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/EYsRN8q4jHJDmG5DNf-gaM0Bq418YMXollFxtB9d_NZ6pg?e=joLAvU) (~Nov 2024).
 
 The above field specification enables automation utilities to find the latest firmware version and automatically update compatible hardware.
 

@@ -21,9 +21,17 @@ An RP2040-based Harp hardware/firmware project template.
 * harp protocol core library included as a submodule [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040)
 
 # Using this template
+## Repository
+* If the project has a corresponding Allen Institute SIPE project number, prepend the repository description with: `{SIPE Project Number}:`.
+* add the tag `Harp`
+
 ## Hardware
 * Remove all unused hardware folder starter projects.
 * 🔧 Design your hardware.
+* In the PCBA silkscreen, add:
+  * SIPE part number with full project semantic version appended in the format: `{SIPE Project Number}-E-{major}-{minor}-{patch}`.
+  * [QR code](https://www.the-qrcode-generator.com/) linking to the Github repository.
+
 ## Firmware
 * Update the *Manufacturer* and *Description* USB descriptors in the CMakeLists.txt
 * 📝 Write your firmware.

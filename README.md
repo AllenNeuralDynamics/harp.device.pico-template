@@ -5,8 +5,10 @@ An RP2040-based Harp hardware/firmware project template.
 ## Features
 * predefined *.gitignore* file to remove extraneous KiCAD (hardware) files.
 ### Hardware
-* Schematic template for an isolated Full Speed USB Harp Device with an audio jack
-* basic PCB Layout with size hints for various existing enclosures
+* Schematic template for a generic Harp Device including:
+  * ground-isolated Full Speed USB communication
+  * 3.5mm audio jack for Harp-protocol time synchronization
+* Basic PCB Layout with size hints for various existing enclosures
   * DC Barrel Jack (2.1 x 5.5mm, positive center)
   * USBC
   * 3.5mm audio jack for Harp synchronization signal

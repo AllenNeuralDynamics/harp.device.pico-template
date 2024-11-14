@@ -55,6 +55,10 @@ Each hardware release specifies:
 > [!NOTE]
 > SIPE part numbers only encode hardware semantic version major number, so multiple minor/patch hardware releases may point to the same SIPE part number.
 
+> [!NOTE]
+> It is possible for a project to have PCBA variants--possibly with very different functionality. In this case, reserve a hardware major version range (>100 suggested) for this variant and treat it as a distinct hardware release (i.e: with all corresponding included hardware files).
+
+
 Each firmware release specifies:
 * firmware semantic version
 * compatible hardware (SIPE part number or part number range).

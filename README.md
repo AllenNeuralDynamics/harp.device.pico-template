@@ -24,9 +24,10 @@ An RP2040-based Harp hardware/firmware project template.
 * harp protocol core library included as a submodule [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040)
 
 # Using this template
-## Repository
+## Repository Setup
 * If the project has a corresponding Allen Institute SIPE project number, prepend the repository description with: `{SIPE Project Number}:`.
 * add the tag `Harp`
+* Long-term: remove these instructions!
 
 ## Hardware
 * Remove all unused hardware folder starter projects.

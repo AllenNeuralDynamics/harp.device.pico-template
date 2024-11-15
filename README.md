@@ -8,7 +8,10 @@ An RP2040-based Harp hardware/firmware project template.
 * Schematic template for a generic Harp Device including:
   * ground-isolated Full Speed USB communication
   * 3.5mm audio jack for Harp-protocol time synchronization
-* Basic PCB Layout with size hints for various existing enclosures
+  * RP2040 MCU and required "jellybean" components including:
+    * 2MB external flash (Winbond MPN: W25Q16JVUXIQ TR).
+  * 2 power supply chain options for power derived from either USB directly or from a DC barrel jack.
+* Basic PCBA Layout with size hints for various existing enclosures
   * DC Barrel Jack (2.1 x 5.5mm, positive center)
   * USBC
   * 3.5mm audio jack for Harp synchronization signal

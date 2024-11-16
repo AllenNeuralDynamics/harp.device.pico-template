@@ -49,6 +49,7 @@ Each release specifies:
 
 Each hardware release includes:
 * STEP file of the PCB named with the SIPE part number
+* schematic (PDF)
 * Gerber files (with logos removed) of the PCBA
 * Position files for component placement
 * Bill-of-Materials for the PCBA

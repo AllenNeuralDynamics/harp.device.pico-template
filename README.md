@@ -24,6 +24,7 @@ An RP2040-based Harp hardware/firmware project template.
 * harp protocol core library included as a submodule [harp.core.rp2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040)
 
 # Using this template
+Start by clicking the "Use this Template" button in the upper right corner, or click [here](https://github.com/new?template_name=harp.device.pico-template&template_owner=AllenNeuralDynamics).
 ## Repository Setup
 * If the project has a corresponding Allen Institute SIPE project number, prepend the repository description with: `{SIPE Project Number}:`.
 * add the tag `Harp`

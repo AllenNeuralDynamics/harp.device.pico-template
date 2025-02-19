@@ -75,7 +75,7 @@ HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
 int main()
 {
 // Init Synchronizer.
-    HarpSynchronizer::init(uart1, HARP_SYNC_PIN);
+    HarpSynchronizer::init(uart1, HARP_SYNC_RX_PIN);
     app.set_synchronizer(&HarpSynchronizer::instance());
 #ifdef DEBUG
     stdio_uart_init_full(uart0, 921600, UART_TX_PIN, -1); // use uart1 tx only.

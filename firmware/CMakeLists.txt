@@ -6,13 +6,27 @@ add_definitions(-DGIT_HASH="${COMMIT_ID}") # Usable in source code.
 
 #add_definitions(-DDEBUG) # Uncomment for debugging
 
+add_definitions(-DUSBD_MANUFACTURER="Allen Institute")
+add_definitions(-DUSBD_PRODUCT="widget")
+
+if (DEFINED PICO_SDK_PATH)
+    message("Using explicitly defined PICO_SDK_PATH.")
+elseif (DEFINED ENV{PICO_SDK_PATH} AND NOT DEFINED PICO_SDK_PATH)
+    add_definitions(-DPICO_SDK_PATH="$ENV{PICO_SDK_PATH}")
+    message("Using environment variable PICO_SDK_PATH.")
+else()
+    message(SEND_ERROR "PICO_SDK_PATH is not defined either as an environment "
+"variable or explicitly via 'cmake -DPICO_SDK_PATH=<path to pico sdk> ..'")
+endif()
+include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
+
 # PICO_SDK_PATH must be defined.
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # Use modern conventions like std::invoke
 set(CMAKE_CXX_STANDARD 17)
 
-project(harp_c_app_example-${COMMIT_ID})
+project(harp_c_app_example)
 
 pico_sdk_init()
 add_subdirectory(lib/harp.core.rp2040/firmware) # Path to harp.core.rp2040.

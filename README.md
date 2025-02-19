@@ -77,7 +77,16 @@ The release title is specified as follows:
 
 `hw{hw major}.{hw minor}.{hw patch}-fw{fw major}.{fw minor}.{fw patch}`
 
+If the release has firmware-only changes, you can drop the `hw*` section, and vice versa.
+
 > [!NOTE]
 > After Oct 2024, hardware major fields on all future releases will be equivalent to the major version number of the SIPE part number. See the [SIPE PCBA part numbering standard](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/EYsRN8q4jHJDmG5DNf-gaM0Bq418YMXollFxtB9d_NZ6pg?e=joLAvU) for more details.
 
 The above field spec enables automation utilities to find the latest firmware version and automatically update compatible hardware. Since releases can include changes to some, but not other fields, unchanged fields are omitted. (i.e: firmware-only changes would be titled `fw{fw major}.{fw minor}.{fw patch}`.)
+
+## Creating a New Release
+1. Make a [git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) based on the commit in the main branch that you'd like to create the release from. Use the naming convention specified in the [Release Title](#release-title) section.
+2. Push the tag to Github.
+3. From the repository's corresponding *Release* page, create a new release from the tag you just added. Give it the same title as the tag.
+4. If the release includes new _firmware_, compile it locally, and upload a copy of the *.uf2* file as an attachment.
+5. If the release includes new _hardware_, upload: (1) the gerber files (zipped), (2) the position files, (3) any manufacturing notes, (4) the bill-of-materials, (5) a PDF of the schematic.

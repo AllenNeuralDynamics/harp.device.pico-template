@@ -1,5 +1,9 @@
 ## Setting up the Build Environment
 
+
+## Pre-requisites
+Install CMake.
+
 ### Install Submodules
 This project uses the [Harp Core RP2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule.
 Install it with:
@@ -25,7 +29,7 @@ On Linux, you can define it in your `.bashrc` file.
 On Windows, you can define it via System Properties ([tutorial](https://www.computerhope.com/issues/ch000549.htm)).
 
 Confirm that the environment variable is applied to your system by opening a terminal (Powershell on Windows) and
-entering
+entering (with the `$` sign)
 ```bash
 $PICO_SDK_PATH
 ```

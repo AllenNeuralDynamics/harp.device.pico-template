@@ -17,16 +17,25 @@ git submodule update --init --recursive
 ````
 
 ### Point to Pico SDK
-Recommended, but optional: define the `PICO_SDK_PATH` environment variable to point to the location where the pico-sdk was downloaded. i.e:
+Optional: define the `PICO_SDK_PATH` environment variable to point to the location where the pico-sdk was downloaded. i.e:
 ````
 PICO_SDK_PATH=/home/username/projects/pico-sdk
 ````
-On Linux, it may be preferrable to put this in your `.bashrc` file.
+On Linux, you can define it in your `.bashrc` file.
+On Windows, you can define it via System Properties ([tutorial](https://www.computerhope.com/issues/ch000549.htm)).
+
+Confirm that the environment variable is applied to your system by opening a terminal (Powershell on Windows) and
+entering
+```bash
+$PICO_SDK_PATH
+```
+to confirm that the path was defined correctly.
+(Windows may require a restart for the environment variable to take effect.)
 
 ## Compiling the Firmware
 
 ### Without an IDE
-From this directory, create a directory called build, enter it, and invoke cmake with:
+From within this folder, create a new folder called *build*, enter it, and invoke cmake with:
 ````
 mkdir build
 cd build

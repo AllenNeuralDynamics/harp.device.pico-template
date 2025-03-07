@@ -2,7 +2,15 @@
 
 
 ## Pre-requisites
-Install CMake.
+
+You will need CMake, make, and the gcc-arm-embedded toolchain.
+
+On Windows, we suggest developing from Visual Studio Code and installing the [Pico Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico) to install everything for you.
+
+On Linux, install the following:
+```bash
+sudo apt install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+```
 
 ### Install Submodules
 This project uses the [Harp Core RP2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule.
@@ -37,6 +45,11 @@ to confirm that the path was defined correctly.
 (Windows may require a restart for the environment variable to take effect.)
 
 ## Compiling the Firmware
+
+### With the Visual Studio Code Extension
+Using the Pico extension, import the *firmware* folder with the default options.
+
+Click the compile button.
 
 ### Without an IDE
 From within this folder, create a new folder called *build*, enter it, and invoke cmake with:

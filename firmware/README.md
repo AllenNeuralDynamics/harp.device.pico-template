@@ -1,11 +1,30 @@
-## Setting up the Build Environment
+There are two sets of instructions, one for [Windows](#windows-setup) and one for [Linux](linux-setup).
 
+
+# Windows Setup
+
+* Option A: use Visual Studio Code (easy way)
+* Option B: develop with any IDE and compile from the command line.
+
+> [!NOTE]
+> For Option B, simply install [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), and then follow the directions in the [Linux](#linux-setup) section of this guide. The rest of this section covers Option A.
+  
+## Pre-requisites
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+2. Install the [Pico Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico)
+
+## Project Setup
+In Visual Studio, click on the Pico icon that appears after installing the Pico Extension. Select _Import Project_ and import the _firmware_ folder of this repository.
+Choose the default options.
+
+## Compiling the Firmware
+Click the _compile_ button at the corner of the screen. When the compilation finishes, you're ready to [flash the firmware](#flashing-the-firmware).
+
+# Linux Setup
 
 ## Pre-requisites
 
 You will need CMake, make, and the gcc-arm-embedded toolchain.
-
-On Windows, we suggest developing from Visual Studio Code and installing the [Pico Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico) to install everything for you.
 
 On Linux, install the following:
 ```bash
@@ -71,3 +90,7 @@ Press-and-hold the Pico's BOOTSEL button and power it up (i.e: plug it into usb)
 At this point you do one of the following:
 * drag-and-drop the created **\*.uf2** file into the mass storage device that appears on your pc.
 * flash with [picotool](https://github.com/raspberrypi/picotool)
+
+# References
+* [YouTube: How to Set Up Visual Studio Code to Program the Pi Pico (Windows)](https://www.youtube.com/watch?v=mUF9xjDtFfY&t=55s)
+* [Pico SDK: Unix Command Line](https://github.com/raspberrypi/pico-sdk?tab=readme-ov-file#unix-command-line) Setup

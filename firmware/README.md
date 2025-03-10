@@ -32,7 +32,7 @@ sudo apt install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-n
 ```
 
 ### Install Submodules
-This project uses the [Harp Core RP2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule.
+This project uses the Harp [core.pico](https://github.com/harp-tech/core.pico) library as a submodule.
 Install it with:
 ````
 git submodule update --init

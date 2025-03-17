@@ -3,6 +3,7 @@ There are two sets of instructions, one for [Windows](#windows-setup) and one fo
 
 # Windows Setup
 
+Windows has two sub-options for developing:
 * Option A: use Visual Studio Code (easy way)
 * Option B: develop with any IDE and compile from the command line.
 

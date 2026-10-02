@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
 	(paper "A4")
 	(title_block
@@ -11,15 +11,15 @@
 		(company "The Allen Institute")
 	)
 	(lib_symbols)
-	(wire
-		(pts
-			(xy 195.58 90.17) (xy 207.645 90.17)
+	(text "OPTIONAL"
+		(exclude_from_sim no)
+		(at 214.376 82.296 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ea93f64-c847-48c8-b764-112419df4b91")
+		(uuid "14e8ef56-48ad-4909-8b85-082e7576c8f6")
 	)
 	(text "In:\n  * 12-20VDC\nOut:\n  * 5V 750mA\n  * 3.3V 250mA\n  * +/- 2.5V 250mA"
 		(exclude_from_sim no)
@@ -32,9 +32,23 @@
 		)
 		(uuid "7bbc0c59-7d0e-4e18-ad4f-25bf0bf0cbb5")
 	)
+	(wire
+		(pts
+			(xy 195.58 90.17) (xy 207.645 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea93f64-c847-48c8-b764-112419df4b91")
+	)
 	(sheet
 		(at 207.645 86.36)
 		(size 13.97 14.605)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -65,13 +79,13 @@
 		)
 		(pin "IN" input
 			(at 207.645 90.17 180)
+			(uuid "9a2865e5-2777-4599-ae08-5f4db45b7d02")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "9a2865e5-2777-4599-ae08-5f4db45b7d02")
 		)
 		(instances
 			(project "usb_isolated"
@@ -84,6 +98,10 @@
 	(sheet
 		(at 64.77 81.28)
 		(size 18.415 26.035)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -123,6 +141,10 @@
 	(sheet
 		(at 169.545 81.28)
 		(size 26.035 26.035)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -153,13 +175,13 @@
 		)
 		(pin "TTL_OUT" input
 			(at 195.58 90.17 0)
+			(uuid "2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e")
 		)
 		(instances
 			(project "usb_isolated"
@@ -174,4 +196,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
